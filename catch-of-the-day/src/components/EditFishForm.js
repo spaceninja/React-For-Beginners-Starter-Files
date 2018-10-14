@@ -50,6 +50,9 @@ class EditFishForm extends React.Component {
           type="text"
           placeholder="Image"
         />
+        <button onClick={() => this.props.deleteFish(this.props.index)}>
+          Remove Fish
+        </button>
       </div>
     );
   }
