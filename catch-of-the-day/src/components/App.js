@@ -14,7 +14,7 @@ class App extends React.Component {
   };
 
   static propTypes = {
-    match: PropTypes.object
+    match: PropTypes.object.isRequired
   };
 
   addFish = fish => {
@@ -120,6 +120,7 @@ class App extends React.Component {
           deleteFish={this.deleteFish}
           fishes={this.state.fishes}
           loadSampleFishes={this.loadSampleFishes}
+          storeId={this.props.match.params.storeId}
           updateFish={this.updateFish}
         />
       </div>

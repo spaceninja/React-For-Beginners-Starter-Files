@@ -5,13 +5,13 @@ class EditFishForm extends React.Component {
   static propTypes = {
     fish: PropTypes.shape({
       image: PropTypes.string,
-      name: PropTypes.string,
+      name: PropTypes.string.isRequired,
       desc: PropTypes.string,
       status: PropTypes.string,
-      price: PropTypes.number
-    }),
-    index: PropTypes.string,
-    updateFish: PropTypes.func
+      price: PropTypes.number.isRequired
+    }).isRequired,
+    index: PropTypes.string.isRequired,
+    updateFish: PropTypes.func.isRequired
   };
 
   handleChange = e => {
